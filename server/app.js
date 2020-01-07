@@ -8,6 +8,7 @@ const app = express();
 app.use('/graphql', graphqlHTTP({
     schema,
     graphiql: true
+    //we want to use tool when we go to the graphql browser
 }));
 
 app.listen(4000, () => {

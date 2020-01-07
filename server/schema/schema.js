@@ -14,9 +14,10 @@ var books = [
     { name: 'The Final Empire', genre: 'Fantasy', id: '2' },
     { name: 'The Long Earth', genre: 'Sci-Fi', id: '3' },
 ];
-
+//Define the Objects
 const BookType = new GraphQLObjectType({
     name: 'Book',
+    //Define the fields within the Object
     fields: ( ) => ({
         id: { type: GraphQLID },
         name: { type: GraphQLString },
@@ -25,6 +26,7 @@ const BookType = new GraphQLObjectType({
 });
 
 const RootQuery = new GraphQLObjectType({
+    //defines which query can be used from the front end
     name: 'RootQueryType',
     fields: {
         book: {
