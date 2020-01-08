@@ -20,6 +20,7 @@ mongoose.connection.once('open', () => {
 app.use('/graphql', graphqlHTTP({
     schema,
     graphiql: true
+    //this means we want to use the graphiql tool when we go to the graphql browser
 }));
 
 app.listen(4000, () => {
